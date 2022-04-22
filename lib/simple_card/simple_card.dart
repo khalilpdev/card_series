@@ -9,16 +9,30 @@ class SimpleCard extends StatelessWidget {
         height: 100,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: Colors.red,
+          color: Colors.white,
           borderRadius: BorderRadius.circular(20),
         ),
-        padding: EdgeInsets.all(16),
-        margin: EdgeInsets.all(12),
-        child: ListTile(
-          leading: CircleAvatar(),
-          title: Text('Leandro Khalil'),
-          subtitle: Text('C# Developer Manager'),
-          trailing: Icon(Icons.camera_alt_outlined),
+        padding: const EdgeInsets.all(16),
+        margin: const EdgeInsets.all(12),
+        child: const ListTile(
+          contentPadding: EdgeInsets.all(0),
+          leading: CircleAvatar(
+            radius: 30,
+            backgroundImage: NetworkImage(
+                "https://media-exp1.licdn.com/dms/image/C4D03AQGON82icciopQ/profile-displayphoto-shrink_200_200/0/1617628995695?e=1655942400&v=beta&t=u_rLzdXO77XN18STLNp8XOmCerdSlvKi8s00dRM2T68"),
+          ),
+          title: Padding(
+            padding: EdgeInsets.only(top: 8.0),
+            child: Text("Leandro Khalil"),
+          ),
+          subtitle: Padding(
+            padding: EdgeInsets.only(top: 8.0),
+            child: Text('C# Developer Manager'),
+          ),
+          trailing: Icon(
+            Icons.camera_alt_outlined,
+            size: 27,
+          ),
         ));
   }
 }
