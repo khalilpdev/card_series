@@ -5,10 +5,35 @@ class CreditCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 480,
-      height: 300,
-      color: Colors.black,
+    return Padding(
+      padding: const EdgeInsets.all(32),
+      child: AspectRatio(
+        aspectRatio: 480 / 300,
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.black,
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: const [
+                  Icon(Icons.rocket_launch_sharp, color: Colors.white),
+                  Text(
+                    'KhalilBank',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ]),
+          ),
+        ),
+      ),
     );
   }
 }
