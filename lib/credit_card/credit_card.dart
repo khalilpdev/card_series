@@ -30,6 +30,28 @@ class CreditCard extends StatelessWidget {
                   ),
                 ],
               ),
+              Row(
+                children: [
+                  Column(
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            width: 40,
+                            height: 30,
+                            color: Colors.grey,
+                          ),
+                          const SizedBox(width: 16),
+                          const Icon(
+                            Icons.wifi,
+                            color: Colors.white,
+                          )
+                        ],
+                      )
+                    ],
+                  )
+                ],
+              ),
             ]),
           ),
         ),
