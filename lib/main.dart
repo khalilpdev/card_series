@@ -1,3 +1,4 @@
+import 'package:card_series/credit_card/credit_card.dart';
 import 'package:card_series/simple_card/simple_card.dart';
 import 'package:flutter/material.dart';
 
@@ -40,6 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            const CreditCard(),
             SimpleCard(
               title: "Leandro Khalil",
               subtitle: "C# Developer Manager",
@@ -50,16 +52,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 debugPrint("teste");
               },
             ),
-            SimpleCard(
-              imageUrl:
-                  ("https://cdn.pixabay.com/photo/2020/11/10/15/51/bear-5730216_960_720.png"),
-              title: "Other 1",
-              subtitle: "Brave ",
-              icon: Icons.close,
-              onClick: () {
-                debugPrint("teste 2");
-              },
-            )
+            // SimpleCard(
+            //   imageUrl:
+            //       ("https://cdn.pixabay.com/photo/2020/11/10/15/51/bear-5730216_960_720.png"),
+            //   title: "Other 1",
+            //   subtitle: "Brave ",
+            //   icon: Icons.close,
+            //   onClick: () {
+            //     debugPrint("teste 2");
+            //   },
+            // ),
           ],
         ),
       ),
